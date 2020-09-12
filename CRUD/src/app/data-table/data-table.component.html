@@ -1,1 +1,41 @@
-<p>data-table works!</p>
+<p-card>
+<p-table [columns]="cols" [value]="dataTable">
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+          <th>Edit</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+          <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+          </td>
+          <td><p-button (onClick)="showDialog(rowData)">Edit</p-button></td>
+      </tr>
+  </ng-template>
+</p-table>
+</p-card>
+<p-dialog header="Edit Form" [(visible)]="display">
+  <form [formGroup]="editGroup" (ngSubmit)="onSubmit()">
+    <div *ngFor="let form_elem of metaData">
+    <div [ngSwitch]="form_elem.type">
+      <div *ngSwitchCase="'input'">
+        <div class="p-fluid">
+        <label>{{form_elem.label}}</label>
+        <input pInputText type="text" formControlName="{{form_elem.name}}"/>
+      </div>
+      </div>
+      <div *ngSwitchCase="'select'">
+        <div class="p-fluid">
+          <label>{{form_elem.label}}</label>
+        <p-dropdown [options]="optt" formControlName="{{form_elem.name}}"></p-dropdown>
+      </div>
+      </div>
+    </div>
+    </div>
+    <p-button type="submit">Save</p-button>
+  </form>
+</p-dialog>

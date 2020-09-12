@@ -1,0 +1,21 @@
+.p-table{
+  border: 10px;
+}
+::ng-deep .p-dialog .p-dialog-content {
+  background: #ffb4b4;
+  color: #495057;
+  padding: 0 1.5rem 2rem 1.5rem;
+  height: 300px;
+}
+::ng-deep .p-dialog .p-dialog-header {
+  border-bottom: 0 none;
+  background:  #ffb4b4;
+  color: #495057;
+  padding: 1.5rem;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+::ng-deep .p-card .p-card-body {
+  padding: 1rem;
+  background-color: lightblue;
+}
