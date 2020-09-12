@@ -15,6 +15,23 @@
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
+::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  text-align: left;
+  border: 1px solid #ecb100;
+  border-width: 0 0 1px 0;
+  padding: 1rem 1rem;
+}
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  text-align: left;
+  height: 5px;
+  padding: 1rem 1rem;
+  border: 1px solid #ecb100;
+  border-width: 0 0 1px 0;
+  font-weight: 600;
+  color: #ffffff;
+  background: #002f5e;
+  transition: box-shadow 0.2s;
+}
 ::ng-deep .p-card .p-card-body {
   padding: 1rem;
   background-color: lightblue;
