@@ -25,7 +25,8 @@
       <div *ngSwitchCase="'input'">
         <div class="p-fluid">
         <label>{{form_elem.label}}</label>
-        <input pInputText type="text" formControlName="{{form_elem.name}}"/>
+        <input pInputText type="text" formControlName="{{form_elem.name}}" [readOnly]="form_elem.readOnly"/>
+        <div *ngIf="this.editGroup.controls[form_elem.name].errors" style="color: red;">{{this.editGroup.status}}</div>
       </div>
       </div>
       <div *ngSwitchCase="'select'">
@@ -36,6 +37,6 @@
       </div>
     </div>
     </div>
-    <p-button type="submit">Save</p-button>
+    <p-button type="submit" [disabled]="this.editGroup.status =='INVALID' ">Save</p-button>
   </form>
 </p-dialog>

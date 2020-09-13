@@ -30,7 +30,7 @@ export class DataTableComponent implements OnInit {
 
   showDialog(data: any) {
     metaData.forEach(input_template=>{
-      this.editForm[input_template.name]=new FormControl(data[input_template.name]);
+      this.editForm[input_template.name]=new FormControl(data[input_template.name],[Validators.pattern(input_template.pattern)]);
     })
     this.editGroup = new FormGroup(this.editForm);
     //console.log(data);
@@ -38,6 +38,13 @@ export class DataTableComponent implements OnInit {
 }
 onSubmit(){
   console.log(this.editGroup.value);
+  console.log(this.editGroup);
+}
+getError(name:string){
+  return this.editGroup.get(name);
+}
+showErr(val:any){
+  console.log(val)
 }
 
 }
