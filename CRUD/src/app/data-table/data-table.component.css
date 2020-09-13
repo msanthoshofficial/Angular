@@ -1,15 +1,23 @@
 .p-table{
   border: 10px;
 }
+label {
+  color: orange;
+}
 ::ng-deep .p-dialog .p-dialog-content {
-  background: #ffb4b4;
+  background: #1b1818;
   color: #495057;
   padding: 0 1.5rem 2rem 1.5rem;
   height: 300px;
 }
+::ng-deep .p-dialog .p-dialog-header .p-dialog-title {
+  font-weight: 600;
+  color: white;
+  font-size: 1.25rem;
+}
 ::ng-deep .p-dialog .p-dialog-header {
   border-bottom: 0 none;
-  background:  #ffb4b4;
+  background:  #221e1e;
   color: #495057;
   padding: 1.5rem;
   border-top-right-radius: 3px;
@@ -29,10 +37,10 @@
   border-width: 0 0 1px 0;
   font-weight: 600;
   color: #ffffff;
-  background: #002f5e;
+  background: #000000;
   transition: box-shadow 0.2s;
 }
 ::ng-deep .p-card .p-card-body {
-  padding: 1rem;
-  background-color: lightblue;
+  padding: 1px 10px;
+  background-color: #ffa53de8;
 }
