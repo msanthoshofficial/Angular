@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
 import metaData from './meta-Data';
 import tableData from './table-Data'
+import { DataServiceService } from '../data-service.service'
 
 @Component({
   selector: 'app-data-table',
@@ -18,7 +19,9 @@ export class DataTableComponent implements OnInit {
   display: boolean = false;
   public editForm = {}
 
-  constructor() { }
+  constructor(private dataService: DataServiceService) {
+    this.showcol();
+  }
 
   ngOnInit(): void {
     metaData.forEach(input_template=>{
@@ -27,6 +30,11 @@ export class DataTableComponent implements OnInit {
     this.editGroup = new FormGroup(this.editForm);
   }
 
+  showcol() {
+    this.dataService.getCol().subscribe((data: any) => {
+      console.log(data);
+    })
+  }
 
   showDialog(data: any) {
     metaData.forEach(input_template=>{

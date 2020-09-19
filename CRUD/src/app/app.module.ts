@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // PRIMENG
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
@@ -23,6 +24,7 @@ import { DataTableComponent } from './data-table/data-table.component';
     DataTableComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     AccordionModule,
