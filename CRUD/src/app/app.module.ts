@@ -17,11 +17,13 @@ import {CardModule} from 'primeng/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataTableComponent
+    DataTableComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,

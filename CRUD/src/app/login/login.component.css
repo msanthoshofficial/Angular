@@ -1,0 +1,36 @@
+::ng-deep .p-card{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: auto;
+  background-color: rgb(221, 235, 235);
+}
+
+.login{
+  text-align: center;
+  background-color: blanchedalmond;
+}
+
+::ng-deep .p-button.p-button-text {
+  background-color: black;
+  color: #FFC107;
+  border-color: transparent;
+}
+::ng-deep .p-button {
+  margin-left: 140px;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  align-items: center;
+  vertical-align: bottom;
+  /* background-color: black; */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+::ng-deep .p-component, .p-component * {
+  box-sizing: border-box;
+  border-radius: 10px;
+}

@@ -1,0 +1,20 @@
+
+<p-card class='card'>
+  <ng-template pTemplate="header">
+    <h1 class='login'>Login</h1>
+</ng-template>
+<div class="p-fluid">
+  <div class="p-field">
+      <label for="username">Username</label>
+      <input id="username" type="text" [ngModel]="username" pInputText>
+  </div>
+  <div class="p-field">
+      <label for="password">Password</label>
+      <input id="password" type="password" [ngModel]="password" pInputText>
+  </div>
+</div>
+<ng-template pTemplate="footer">
+  <button pButton pRipple label="submit" icon="pi pi-check" class="p-button-text" (click)="login()" ></button>
+</ng-template>
+</p-card>
+
