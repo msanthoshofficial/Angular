@@ -17,4 +17,12 @@ app.get('/api/getCollection', async  (req,res) => {
     res.json(result)
 })
 
+app.post('/api/addDoc', async (req,res) => {
+  
+  const { querry } = req.body;
+  console.log("backemd",querry)
+  var result = await db.collection('users').insertOne(querry);
+  if(result){res.send(true)} else {res.send(false)};
+})
+
 app.listen(8000, () => { console.log("Backend listening at port 8000") });

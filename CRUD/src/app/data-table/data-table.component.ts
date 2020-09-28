@@ -12,7 +12,7 @@ import { DataServiceService } from '../data-service.service'
 export class DataTableComponent implements OnInit {
 
   public metaData = metaData;
-  public dataTable = tableData;
+  public dataTable
   public editGroup : FormGroup;
   public cols = [{"field":'name', "header":'Name'},{"field":'age', "header":'Age'},{"field":'location', "header":'Location'}]
   public optt = [{"value":'chennai', "label":'CHENNAI'},{"value":'madurai', "label":'MADURAI'},{"value":'trichy', "label":'TRICHY'}]
@@ -33,6 +33,7 @@ export class DataTableComponent implements OnInit {
   showcol() {
     this.dataService.getCol().subscribe((data: any) => {
       console.log(data);
+      this.dataTable = data;
     })
   }
 
@@ -47,6 +48,9 @@ export class DataTableComponent implements OnInit {
 onSubmit(){
   console.log(this.editGroup.value);
   console.log(this.editGroup);
+  this.dataService.addDoc(this.editGroup.value).subscribe((data: any) => {
+    console.log(data);
+  });
 }
 getError(name:string){
   return this.editGroup.get(name);

@@ -5,7 +5,7 @@ const metaData = [
     "label":"Name",
     "pattern":".{3,}",
     "required":true,
-    "readOnly":true,
+    "readOnly":false,
   },
   {
     "type":"input",
@@ -18,7 +18,7 @@ const metaData = [
     "type":"select",
     "name":"location",
     "label":"Location",
-    "options":["chennai","madurai","trichy"]
+    "options":"opt",
   }
 ]
 export default metaData;
