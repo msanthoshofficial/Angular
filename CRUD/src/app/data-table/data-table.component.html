@@ -1,3 +1,8 @@
+<div class="header">
+  <a class="PageTitle">CRUD DASHBOARD</a>
+  <a type="submit" [routerLink]="['/']" (ngSubmit)="logout()" class="logbut"><i class="pi pi-sign-out" style="font-size: 1rem; padding-right: 5px;"></i>Logout</a>
+</div>
+<div class="table">
 <p-card>
 <p-table [columns]="cols" [value]="dataTable">
   <ng-template pTemplate="header" let-columns>
@@ -18,7 +23,8 @@
   </ng-template>
 </p-table>
 </p-card>
-<p-dialog header="Edit Form" [(visible)]="display">
+</div>
+<p-dialog header="Edit Form" class="edit" [maximizable]="true" [(visible)]="display">
   <form [formGroup]="editGroup" (ngSubmit)="onSubmit()">
     <div *ngFor="let form_elem of metaData">
     <div [ngSwitch]="form_elem.type">

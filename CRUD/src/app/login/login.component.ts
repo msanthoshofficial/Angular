@@ -10,9 +10,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  public realusername = "santhosh";
+  public realpassword = '123';
   public username: any;
   public password: any;
-  login(){
+
+  login(event) {
+    //console.log(event)
     this.router.navigate(['/table']);
 }
   ngOnInit(): void {

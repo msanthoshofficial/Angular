@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
 import metaData from './meta-Data';
-import tableData from './table-Data'
 import { DataServiceService } from '../data-service.service'
 
 @Component({
@@ -51,7 +50,12 @@ onSubmit(){
   this.dataService.addDoc(this.editGroup.value).subscribe((data: any) => {
     console.log(data);
   });
+  }
+
+logout() {
+  console.log("logged out")
 }
+
 getError(name:string){
   return this.editGroup.get(name);
 }

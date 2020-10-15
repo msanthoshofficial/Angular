@@ -1,21 +1,35 @@
+ ::ng-deep .bgm{
+  background-color: #1d1b1b;
+}
+
+.header{
+  height: 40px;
+  background-color:#ffb809;
+  overflow: hidden;
+}
+
+.table{
+  padding-top: 10px;
+}
+
 .p-table{
   border: 10px;
 }
 label {
   color: orange;
 }
-::ng-deep .p-dialog .p-dialog-content {
+::ng-deep .edit .p-dialog .p-dialog-content {
   background: #1b1818;
   color: #495057;
   padding: 0 1.5rem 2rem 1.5rem;
   height: 300px;
 }
-::ng-deep .p-dialog .p-dialog-header .p-dialog-title {
+::ng-deep .edit .p-dialog .p-dialog-header .p-dialog-title {
   font-weight: 600;
   color: white;
   font-size: 1.25rem;
 }
-::ng-deep .p-dialog .p-dialog-header {
+::ng-deep .edit .p-dialog .p-dialog-header {
   border-bottom: 0 none;
   background:  #221e1e;
   color: #495057;
@@ -40,7 +54,28 @@ label {
   background: #000000;
   transition: box-shadow 0.2s;
 }
-::ng-deep .p-card .p-card-body {
-  padding: 1px 10px;
-  background-color: #ffa53de8;
+::ng-deep .edit .p-card .p-card-body {
+  padding: 1px 2px;
+  background-color: #1d1b1b;
+}
+ .logbut {
+  float: right;
+  font-family: sans-serif;
+  align-self: center;
+  background-color: black;
+  padding: 14px 16px;
+  color: #ffffff;
+}
+.logbut:hover{
+  cursor:pointer;
+  background-color: #545454;
+}
+.PageTitle{
+  float: left;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    align-self: center;
+    padding: 6px 16px;
+    color: #ffffff;
 }

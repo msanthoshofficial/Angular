@@ -1,4 +1,4 @@
-::ng-deep .p-card{
+:host ::ng-deep .card .p-card{
   margin-top: 15%;
   margin-left: 30%;
   margin-right: 30%;
