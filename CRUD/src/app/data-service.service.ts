@@ -9,8 +9,8 @@ export class DataServiceService {
 
   constructor(private http: HttpClient) {
   }
-  public url = "http://localhost:8000/api/getCollection";
-  public url1 = "http://localhost:8000/api/addDoc";
+  public url = "/api/getCollection";
+  public url1 = "/api/addDoc";
   getCol(){
     return this.http.get(this.url);
   }

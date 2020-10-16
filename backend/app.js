@@ -24,5 +24,5 @@ app.post('/api/addDoc', async (req,res) => {
   var result = await db.collection('users').insertOne(querry);
   if(result){res.send(true)} else {res.send(false)};
 })
-
-app.listen(8000, () => { console.log("Backend listening at port 8000") });
+const port = process.env.PORT || 8080
+app.listen(port, () => { console.log("Backend listening at port 8000") });
