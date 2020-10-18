@@ -40,7 +40,7 @@ import { LoginComponent } from './login/login.component';
     DropdownModule,
     CardModule
   ],
-  providers: [],
+  providers: [LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

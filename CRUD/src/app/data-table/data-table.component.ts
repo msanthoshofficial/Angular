@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
 import metaData from './meta-Data';
 import { DataServiceService } from '../data-service.service'
+import tableData from './table-Data'
 
 @Component({
   selector: 'app-data-table',
@@ -30,10 +31,13 @@ export class DataTableComponent implements OnInit {
   }
 
   showcol() {
+
     this.dataService.getCol().subscribe((data: any) => {
       console.log(data);
       this.dataTable = data;
     })
+
+    //this.dataTable = tableData;
   }
 
   showDialog(data: any) {
@@ -52,7 +56,8 @@ onSubmit(){
   });
   }
 
-logout() {
+  logout() {
+  sessionStorage.setItem('approvalState', "NO");
   console.log("logged out")
 }
 

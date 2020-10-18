@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
+const path = require('path');
 var cors = require('cors')
 
 mongoose.connect('mongodb://localhost:27017/crud',{ useUnifiedTopology: true });
 const db = mongoose.connection;
 
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public'))); 
 
 app.get('/', (req,res) => {
   res.send("Welcome to the backend, search something useful... 😝")
